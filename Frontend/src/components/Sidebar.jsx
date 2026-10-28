@@ -51,10 +51,16 @@ export default function Sidebar() {
     <aside className="hidden md:flex md:flex-col w-64 fixed inset-y-0 left-0 z-30 glass border-r">
       <div className="px-6 py-5 border-b divider">
         <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white flex items-center justify-center shadow-lg shadow-brand-500/30">
-            <Sparkles size={18} />
+          <div className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center shadow-lg shadow-brand-500/30">
+            <img
+              src="/favicon.ico"
+              alt="Chronova logo"
+              className="w-full h-full object-contain"
+            />
           </div>
-          <div className="font-semibold text-lg tracking-tight">AI Habit Tracker</div>
+          <div className="font-semibold text-lg tracking-tight">
+            Chronova : AI Habit Tracker
+          </div>
         </div>
       </div>
 
@@ -64,9 +70,10 @@ export default function Sidebar() {
             key={to}
             to={to}
             className={({ isActive }) =>
-              `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition ${isActive
-                ? "bg-gradient-to-r from-brand-500/15 to-brand-500/5 text-brand-700 dark:text-brand-300 ring-1 ring-brand-500/20"
-                : "text-soft hover:bg-[var(--surface-hover)]"
+              `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition ${
+                isActive
+                  ? "bg-gradient-to-r from-brand-500/15 to-brand-500/5 text-brand-700 dark:text-brand-300 ring-1 ring-brand-500/20"
+                  : "text-soft hover:bg-[var(--surface-hover)]"
               }`
             }
           >
