@@ -11,6 +11,7 @@ dotenv.config();
 const app = express();
 
 const allowedOrigins = [
+  "https://chronova-ai-daily-event-tracker-web-application-r9v1rli05.vercel.app",
   "https://chronova-ai-daily-event-tracker-web.vercel.app",
   "http://localhost:5173",
 ];
